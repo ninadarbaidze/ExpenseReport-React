@@ -1,6 +1,15 @@
-# Getting Started with Create React App
+# Expenses Report Built in React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Demo Video:
+
+
+
+
+## Project Component Tree
+
+<img width="900" alt="Screenshot 2022-02-20 at 23 29 16" src="https://user-images.githubusercontent.com/33086430/154860738-6c21477a-f667-4596-a0d5-fd78071d057e.png">
+
+
 
 ## Available Scripts
 
