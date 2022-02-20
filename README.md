@@ -1,8 +1,14 @@
 # Expenses Report Built in React
 
+Demo Images:
+
+<img width="1168" alt="Screenshot 2022-02-21 at 00 10 52" src="https://user-images.githubusercontent.com/33086430/154862277-1a11f9ef-0e69-49a3-9efa-b1ab5ebc0f52.png">
+
+
 Demo Video:
 
 
+https://user-images.githubusercontent.com/33086430/154862238-fdc4be15-0850-452e-8e92-bdbf598b29fb.mov
 
 
 ## Project Component Tree
