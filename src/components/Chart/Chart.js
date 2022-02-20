@@ -2,10 +2,10 @@ import ChartBar from './ChartBar';
 import './Chart.css';
 
 const Chart = (props) => {
-  //list all the DataPoint values in list. it will give us an array of values. if there is two march for example, they will be summed in ExpensesChart.
+  //List all the DataPoint values in list. it will give us an array of values. 
   const dataPointValues = props.dataPoints.map(dataPoint => dataPoint.value); 
   //calculated maximum expenses in concrete month
-  const totalMaximum = Math.max(...dataPointValues); //math max need list of items
+  const totalMaximum = Math.max(...dataPointValues); 
 
   return (
     <div className='chart'>

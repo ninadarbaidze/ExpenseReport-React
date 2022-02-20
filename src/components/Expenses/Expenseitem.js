@@ -7,12 +7,6 @@ import './ExpenseItem.css';
 
 const ExpenseItem = (props) => {
 
-  // //useState returns an array, first one is a value of the variable, second one is a function which will update data.
-  // const [title, setTitle] = useState(props.title)
-  // const clickHandler = () => {
-  //   setTitle('Updated!') //calling updating function will update existing element by passing arguments.
-  // }
-
   return (
     <li>
     <Card className='expense-item'>

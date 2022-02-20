@@ -3,33 +3,13 @@ import './FormExpense.css';
 
 const FormExpense = (props) => {
 
-
-    // //using one state
-    // const [userInput, setUserInput] = useState({
-    //     enteredTitle: '',
-    //     enteredAmount: '',
-    //     enteredDate: ''
-    // });
-
-    // const TitleChangeHandler = (event) => { 
-    //     //V1
-    //     // setUserInput({
-    //     //     ...userInput,
-    //     //     enteredTitle: event.target.value
-    //     // })
-    //     //V2: if we're depending on previos state snapshot, we should use this function
-    //     setUserInput((prevState) => {
-    //         return {...prevState, enteredTitle: event.target.value} rendering all useState object, overriding enteredTitle.
-    //     })
-    // };
-
     const [enteredTitle, setEnteredTitle] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
    
     //store title
-    const titleChangeHandler = (event) => { //event describes eent that occured.
-        setEnteredTitle(event.target.value) //value of entered characters, it's value will be saved in useState
+    const titleChangeHandler = (event) => { 
+        setEnteredTitle(event.target.value) 
     };
     //store amount
     const amountChangeHandler = (event) => { 
@@ -47,8 +27,9 @@ const FormExpense = (props) => {
             amount: +enteredAmount,
             date: new Date(enteredDate),
           };
-          props.onSaveExpenseData(expenseData); //this props is defined in new expense. we're passing expenseData info to newExpense.js
-    //to reset user input, not to save their iput in form fields
+          //Sending entered data to parent (newExpense.js)
+          props.onSaveExpenseData(expenseData); 
+
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
@@ -63,7 +44,6 @@ const FormExpense = (props) => {
               <label>Title</label>
               <input
                 type='text'
-                // value has purpose to send data in submitEvent
                 value={enteredTitle}
                 onChange={titleChangeHandler}
               />

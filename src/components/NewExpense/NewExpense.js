@@ -3,36 +3,34 @@ import FormExpense from "./FormExpense";
 import "./NewExpense.css";
 
 const NewExpense = (props) => {
-  //for opening or closing form.
+  //Define state for opening or closing form.
   const [open, setOpen] = useState(false);
 
-  //This function is to take user's entered data.
+  //Take entered user data, add id.
   const saveExpenseHandler = (enteredExpressData) => {
     const expenseData = {
       ...enteredExpressData,
       id: Math.random().toString(),
     };
+    //Send this data back to parent (App)
     props.onAddExpense(expenseData);
-    setOpen(false); //to close form when submiting the data.
+    setOpen(false); 
   };
 
-  //Open form when Add New Expenses is clicked
+  //Open form when Add New Expenses button is clicked
   const openExpansesFormHandler = () => {
     setOpen(true);
   };
-  //close form when cancel or add expense button is clicked
+  //Close form when cancel or add expense button is clicked
   const closeExpansesFormHandler = () => {
     setOpen(false); //?
   };
 
   return (
     <div className="new-expense">
-      {/* if setOpen is false, then only button is shown */}
       {!open && (
         <button onClick={openExpansesFormHandler}>Add New Expense</button>
       )}
-
-      {/* if setOpen is open, then only form is shown, we're sending formexpense close function */}
       {open && (<FormExpense
           onSaveExpenseData={saveExpenseHandler}
           close={closeExpansesFormHandler}

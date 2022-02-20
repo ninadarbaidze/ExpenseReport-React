@@ -3,7 +3,7 @@ import React from 'react';
 import Chart from '../Chart/Chart';
 
 const ExpensesChart = (props) => {
-//created list of objects to populate chart with label, and value
+//Created list of objects to populate chart with label, and value
   const chartDataPoints = [
     { label: 'Jan', value: 0 },
     { label: 'Feb', value: 0 },
@@ -19,7 +19,7 @@ const ExpensesChart = (props) => {
     { label: 'Dec', value: 0 },
   ];
 
-//looping through each filtered expenses element and add ChartDataPoint filtered element's amount, if there's nothing to add, we'll add nothing to value so it stays 0
+//looping through each filtered expenses element and add ChartDataPoint filtered element's amount. If it encountered same month twice, it will be summed.
   for (const expense of props.expenses) {
     const expenseMonth = expense.date.getMonth(); // starting at 0 > Jan = 0
     chartDataPoints[expenseMonth].value += expense.amount;
